@@ -1,0 +1,240 @@
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    transition: .3s;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transition: 1s;
+}
+
+.container {
+    max-width: 950px;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.navbar {
+    padding: 12px 10px;
+}
+
+.navbar .containerr {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+}
+
+.navbar .logo {
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar ul a {
+    display: block;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 8px 16px;
+    position: relative;
+}
+
+.navbar ul:has(a:hover) a:not(:hover) {
+    filter: blur(10px);
+}
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.page-content .inner-content {
+    display: flex;
+    row-gap: 30px;
+    flex-direction: column;
+}
+
+.page-content .inner-content .heading {
+    font-size: 4rem;
+}
+
+.page-content .inner-content .heading .txt2 {
+    color: #00ffbb;
+}
+
+
+.page-content .buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.page-content .buttons a {
+    display: block;
+    text-decoration: none;
+    margin: 0 16px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    min-width: 100px;
+    text-align: center;
+    position: relative;
+    backdrop-filter: blur(60px);
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid #ffffff1e;
+}
+
+.page-content .buttons a.active {
+    background-color: white;
+    padding: 20px 50px;
+    color: black;
+}
+
+.page-content .buttons a.active:hover {
+    box-shadow: 0 0 40px rgb(190, 176, 176);
+}
+
+.page-content .buttons a:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(40deg, #ffffff00, #ffffff20, #ffffff00);
+    z-index: -1;
+}
+
+.page-content .buttons a:nth-child(2):hover::before { 
+    left: 100%;
+}
+
+.page-content .buttons a:nth-child(2):hover {
+    transition-delay: .3s;
+    box-shadow: 0 0 40px rgb(238, 5, 5);
+    background-color: #ff310c;
+}
+
+.page-content .social-links {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.page-content .social-links a {
+    display: block;
+    height: 40px;
+    width: 40px;
+    margin: 0 10px;
+    border-radius: 99px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    backdrop-filter: blur(160px);
+    background: #c624f71e;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.page-content .social-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background: #00ffbb;
+    z-index: -1;
+}
+
+.page-content .social-links a:hover::after { 
+    height: 100%;
+}
+
+.hero-sec{
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.hero-sec .main-box{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hero-sec .main-box .box{
+    background-color: black;
+    width: 375px;
+    padding: 20px;
+    height: 260px;
+    border-radius: 10px;
+    row-gap: 12px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    transition: all 0.4s ease-in-out;
+}
+
+.hero-sec .main-box .box:hover{
+    background: #5cc7a433;
+    cursor: pointer;
+    border: 2px solid #4febc1;
+}
+
+.hero-sec .main-box .box .head{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.hero-sec .main-box .box .img img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.hero-sec .main-box .box .more{
+    text-decoration: underline;
+    cursor: pointer;
+    color: #00ffbb;
+}
+
+.foot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: black;
+}
+
+.foot p{
+    color: white;
+}
